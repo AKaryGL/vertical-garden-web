@@ -12,21 +12,23 @@ const Header = () => {
         <FontAwesomeIcon icon={faBars} className='menu-icon' />
       </span>
       <nav className='nav'>
-        <Link id='item' to='/'>
-          Home
-        </Link>
-        <Link id='item' to='plants'>
-          Plants
-        </Link>
-        <Link id='item' to='historical'>
-          Historical
-        </Link>
-        <Link id='item' to='about'>
-          About
-        </Link>
+        <div className='nav-subcontainer'>
+          <Link id='item' to='/'>
+            Home
+          </Link>
+          <Link id='item' to='plants'>
+            Plants
+          </Link>
+          <Link id='item' to='historical'>
+            Historical
+          </Link>
+          <Link id='item' to='about'>
+            About
+          </Link>
+        </div>
       </nav>
       <span className='session-container'>
-        <Link id='item' to='profile'>
+        <Link className='sing-text' to='profile'>
           Sing in
         </Link>
         <FontAwesomeIcon icon={faUser} className='user-icon' />
