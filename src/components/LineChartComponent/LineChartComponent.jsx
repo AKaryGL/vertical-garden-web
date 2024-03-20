@@ -4,6 +4,7 @@ import {
   Legend,
   Line,
   LineChart,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -13,14 +14,16 @@ import './LineChartComponent.css'
 const LineChartComponent = (data) => {
   return (
     <div>
-      <LineChart width={952} height={385} data={data.data} margin={32}>
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='name' />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type='monotone' dataKey='pv' stroke='#4DB474' />
-      </LineChart>
+      <ResponsiveContainer width='70%' aspect={3}>
+        <LineChart data={data.data} margin={32}>
+          <CartesianGrid strokeDasharray='3 3' />
+          <XAxis dataKey='name' />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type='monotone' dataKey='pv' stroke='#4DB474' />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   )
 }
