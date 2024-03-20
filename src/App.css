@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+header {
+  background-color: #282c34;
+}
+
+.paginas{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  margin-left: 280px;
+  margin-right: 280px;
+  margin-bottom: 20px;
+  width: 60%;
+  background-color: #F2F2F2;
+  box-shadow: 0 0 10px #bbb9b9;
+  border-radius: 20px;
+}
+
+.whats {
+  margin-left: 40px;
+  align-items: center;
+  height: 40px;
+}
+
+.face {
+  margin-left: 220px;
+  align-items: center;
+  height: 40px;
+}
+
