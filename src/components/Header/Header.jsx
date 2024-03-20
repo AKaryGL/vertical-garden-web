@@ -24,6 +24,7 @@ const Header = () => {
         <Link id='item' to='about'>
           About
         </Link>
+        <Link id='item' to='about'>About</Link>
       </nav>
       <span className='session-container'>
         <Link id='item' to='profile'>

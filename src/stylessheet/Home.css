@@ -1,0 +1,126 @@
+h1 {
+    font-size: 52px;
+    padding-top: 40px;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.encabezado-container {
+    font-size: 22px;
+    padding-left: 80px;
+    margin-right: 80px;
+    width: 600px;
+    text-align: left;
+}
+
+.image-container {
+    width: 800px;
+    margin-right: 80px;
+}
+
+.huerto {
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 10px #bbb9b9;
+}
+
+button {
+    margin: 20px;
+    height: 40px;
+    width: 180px;
+    border: 1px solid #7AB07A;
+    border-radius: 20px;
+}
+
+.login {
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-bottom: 140px;
+    background-color: #FFF;
+    color: #7AB07A;
+}
+
+.register {
+    background-color: #7AB07A;
+    color: #FFF;
+}
+
+section{
+    width:100%;
+    margin:0 auto;
+}
+
+#container:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#container{
+    padding-top: 10px;
+    padding-bottom: 40px;
+    width: 90%;
+    margin:0 auto;
+}
+
+#container div{
+    width: 17%;
+    height: auto;
+    -webkit-transition: -webkit-transform 1s;
+    display:inline;
+    float:left;
+    margin:0px 3% 0 0;
+    padding: 0;
+}
+#container div img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px #bbb9b9;
+    background-color: #F2F2F2;
+    border: 5px solid #F2F2F2;
+    border-radius: 20px;
+}
+
+#container div img ~ span{
+    width: 100%;
+    display:block;
+    opacity:0;
+    -webkit-transition: opacity 1s;
+    margin: 0;
+    padding:2px 5px;
+    color:#FFF;
+    background:rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px #666;
+    text-align:center;
+}
+
+#container div img:hover + span{
+    opacity:1;
+}
+
+#container:hover div{
+    opacity: 0.2;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+#container:hover div:hover{
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+@media (min-width:1600px){
+    #container div{
+        width: 15%;
+    }
+}
