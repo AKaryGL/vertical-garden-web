@@ -1,0 +1,36 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.content {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-garden-image {
+    width: 600px;
+    margin-right: 90px;
+    border-radius: 40px;
+}
+
+.text-container {
+    font-family: sans-serif;
+    margin-left: 100px;
+    text-align: justify;
+    font-size: 20px;
+    font-family: Semi Bold;
+    width: 500px;
+    text-align: left;
+
+}

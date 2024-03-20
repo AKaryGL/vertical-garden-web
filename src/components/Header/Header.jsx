@@ -15,6 +15,7 @@ const Header = () => {
         <Link id='item' to='calendar'>
           Calendar
         </Link>
+        <Link id='item' to='about'>About</Link>
       </nav>
     </div>
   )
