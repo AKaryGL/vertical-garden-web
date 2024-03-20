@@ -55,12 +55,15 @@ const Historical = () => {
   const scrollToHumidity = () => {
     humidity.current.scrollIntoView({ behavior: 'smooth' })
   }
+
   const scrollToFloorHumidity = () => {
     floorHumidity.current.scrollIntoView({ behavior: 'smooth' })
   }
+
   const scrollToTemperature = () => {
     temperature.current.scrollIntoView({ behavior: 'smooth' })
   }
+
   const scrollToCoTwo = () => {
     coTwo.current.scrollIntoView({ behavior: 'smooth' })
   }
@@ -68,25 +71,33 @@ const Historical = () => {
   return (
     <div>
       <div style={{ display: 'flex', flexDirection: 'row', margin: 19 }}>
-        <button onClick={scrollToHumidity}>Humidity</button>
-        <button onClick={scrollToFloorHumidity}>Floor Humidity</button>
-        <button onClick={scrollToTemperature}>Temperature</button>
-        <button onClick={scrollToCoTwo}>Co2</button>
+        <button className='historicalButton' onClick={scrollToHumidity}>
+          Humidity
+        </button>
+        <button className='historicalButton' onClick={scrollToFloorHumidity}>
+          Floor Humidity
+        </button>
+        <button className='historicalButton' onClick={scrollToTemperature}>
+          Temperature
+        </button>
+        <button className='historicalButton' onClick={scrollToCoTwo}>
+          Co2
+        </button>
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={humidity}>
-        <h3>Humidity</h3>
+        <h2>Humidity</h2>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={floorHumidity}>
-        <h3>Floor Humidity</h3>
+        <h2>Floor Humidity</h2>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={temperature}>
-        <h3>Temperature</h3>
+        <h2>Temperature</h2>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={coTwo}>
-        <h3>Co2</h3>
+        <h2>Co2</h2>
         <LineChartComponent data={data} />
       </div>
     </div>

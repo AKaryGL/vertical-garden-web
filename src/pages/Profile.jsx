@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '../IMGs/Logo_para_Tienda_Ecológica_Sencillo_Verde-removebg-preview.png';
+// import logoImg from '../IMGs/Logo_para_Tienda_Ecológica_Sencillo_Verde-removebg-preview.png';
 
 const Profile = () => {
   return (
     <div style={styles.cardContainer}>
       <div style={styles.card}>
         <div style={styles.left}>
-          <img src={logoImg} alt="Logo" style={styles.logo} />
+          {/* <img src={logoImg} alt="Logo" style={styles.logo} /> */}
         </div>
         <div style={styles.right}>
           <form style={styles.form}>
@@ -139,7 +139,7 @@ const styles = {
   },
   line: {
     flex: '1',
-    height: '1px',
+    height: '2px',
     backgroundColor: '#ccc',
   },
   orText: {

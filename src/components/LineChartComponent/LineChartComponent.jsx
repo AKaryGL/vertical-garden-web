@@ -21,7 +21,7 @@ const LineChartComponent = (data) => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type='monotone' dataKey='pv' stroke='#4DB474' />
+          <Line type='monotone' dataKey='pv' stroke='#4DB474' strokeWidth={2.5} />
         </LineChart>
       </ResponsiveContainer>
     </div>
