@@ -14,7 +14,8 @@
 }
 .subheader-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 26px 0px 8px 0px;
   padding: 0px;
@@ -26,6 +27,7 @@
   box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
 }
+
 .historicalButton {
   display: flex;
   align-items: center;
@@ -36,7 +38,7 @@
   border-radius: 22px;
   background-image: linear-gradient(
     to right,
-    rgba(123, 199, 152, 1),
+    rgba(150, 210, 173, 1),
     rgba(77, 180, 116, 1)
   );
   color: white;

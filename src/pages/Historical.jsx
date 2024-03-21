@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import LineChartComponent from '../components/LineChartComponent/LineChartComponent'
+import LastRegister from '../components/LastRegister/LastRegister'
 import '../stylessheet/Historical.css'
 
 const Historical = () => {
@@ -91,8 +92,11 @@ const Historical = () => {
       <div style={{ height: 'auto', marginBottom: 86 }} ref={humidity}>
         <div className='subheader-container'>
           <h2>Humidity</h2>
+          <LastRegister title={'Humidity'} value={`${19}%`} />
         </div>
-        <LineChartComponent data={data} />
+        <div className='graphic-container'>
+          <LineChartComponent data={data} />
+        </div>
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={floorHumidity}>
         <div className='subheader-container'>
