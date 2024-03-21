@@ -2,9 +2,11 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layout/MainLayout.jsx'
 import Home from './pages/Home.jsx'
-import Irrigations from './pages/Irrigations.jsx'
-import Calendar from './pages/Calendar.jsx'
+import Plants from './pages/Plants.jsx'
+import Historical from './pages/Historical.jsx'
 import About from './pages/About.jsx'
+import Profile from './pages/Profile.jsx'
+import Register from './pages/Register.jsx';
 import './App.css'
 
 function App() {
@@ -13,9 +15,11 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='irrigations' element={<Irrigations />} />
-          <Route path='calendar' element={<Calendar />} />
-          <Route path='about' element={<About />} />
+          <Route path='/plants' element={<Plants />} />
+          <Route path='/historical' element={<Historical />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </MainLayout>
     </div>
