@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 import LineChartComponent from '../components/LineChartComponent/LineChartComponent'
 import LastRegister from '../components/LastRegister/LastRegister'
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../stylessheet/Historical.css'
 
 const Historical = () => {
@@ -54,6 +56,13 @@ const Historical = () => {
   const temperature = useRef(null)
   const coTwo = useRef(null)
 
+  const scrollToTitle = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
   const scrollToHumidity = () => {
     humidity.current.scrollIntoView({ behavior: 'smooth' })
   }
@@ -72,6 +81,9 @@ const Historical = () => {
 
   return (
     <div>
+      <div className='scroll-up' onClick={() => scrollToTitle()}>
+        <FontAwesomeIcon icon={faCaretUp}/>
+      </div>
       <div className='title'>
         <h1>Historical</h1>
       </div>

@@ -1,3 +1,26 @@
+.scroll-up {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 52px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(150, 210, 173, 1),
+    rgba(77, 180, 116, 1)
+  );
+}
+.scroll-up:first-child {
+  color: white;
+  font-size: 52px;
+}
+.scroll-up:hover {
+  cursor: pointer;
+}
+
 .title {
   display: flex;
   justify-content: center;
@@ -6,6 +29,7 @@
   padding: 0px;
 }
 .title h1 {
+  color: rgba(105, 105, 105, 1);
   margin: 0px 0px 0px 0px;
   padding: 4px 24px 8px 24px;
   background: rgba(242, 242, 242, 1);
@@ -21,6 +45,7 @@
   padding: 0px;
 }
 .subheader-container h2 {
+  color: rgba(135, 135, 135, 1);
   margin: 16px 0px 16px 0px;
   padding: 4px 24px 8px 24px;
   background: rgba(242, 242, 242, 1);
