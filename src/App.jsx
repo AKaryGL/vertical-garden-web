@@ -6,8 +6,7 @@ import Plants from './pages/Plants.jsx'
 import Historical from './pages/Historical.jsx'
 import About from './pages/About.jsx'
 import Profile from './pages/Profile.jsx'
-import Register from './pages/Register.jsx'; 
-
+import Register from './pages/Register.jsx';
 import './App.css'
 
 function App() {
@@ -19,9 +18,8 @@ function App() {
           <Route path='/plants' element={<Plants />} />
           <Route path='/historical' element={<Historical />} />
           <Route path='/about' element={<About />} />
-          <Route path='/profile' element={<Profile /> } />
+          <Route path='/profile' element={<Profile />} />
           <Route path="/register" element={<Register />} />
-
         </Routes>
       </MainLayout>
     </div>
