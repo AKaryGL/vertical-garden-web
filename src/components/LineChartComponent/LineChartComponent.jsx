@@ -14,7 +14,7 @@ import './LineChartComponent.css'
 const LineChartComponent = (data) => {
   return (
     <div>
-      <ResponsiveContainer width='70%' aspect={3}>
+      <ResponsiveContainer width='90%' aspect={4}>
         <LineChart data={data.data} margin={32}>
           <CartesianGrid strokeDasharray='3 3' />
           <XAxis dataKey='name' />

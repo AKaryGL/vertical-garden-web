@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <div className='container'>
         <div className='encabezado-container'>
-          <h1>Vertical Garden</h1>
+          <h1 id='title'>Vertical Garden</h1>
           <p>
             Welcome to the future of farming at home! With our automated garden
             system.{' '}

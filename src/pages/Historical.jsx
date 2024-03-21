@@ -1,5 +1,9 @@
 import React, { useRef } from 'react'
 import LineChartComponent from '../components/LineChartComponent/LineChartComponent'
+import LastRegister from '../components/LastRegister/LastRegister'
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../stylessheet/Historical.css'
 
 const Historical = () => {
   const data = [
@@ -52,6 +56,13 @@ const Historical = () => {
   const temperature = useRef(null)
   const coTwo = useRef(null)
 
+  const scrollToTitle = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
   const scrollToHumidity = () => {
     humidity.current.scrollIntoView({ behavior: 'smooth' })
   }
@@ -70,6 +81,12 @@ const Historical = () => {
 
   return (
     <div>
+      <div className='scroll-up' onClick={() => scrollToTitle()}>
+        <FontAwesomeIcon icon={faCaretUp}/>
+      </div>
+      <div className='title'>
+        <h1>Historical</h1>
+      </div>
       <div style={{ display: 'flex', flexDirection: 'row', margin: 19 }}>
         <button className='historicalButton' onClick={scrollToHumidity}>
           Humidity
@@ -85,19 +102,30 @@ const Historical = () => {
         </button>
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={humidity}>
-        <h2>Humidity</h2>
-        <LineChartComponent data={data} />
+        <div className='subheader-container'>
+          <h2>Humidity</h2>
+          <LastRegister title={'Humidity'} value={`${19}%`} />
+        </div>
+        <div className='graphic-container'>
+          <LineChartComponent data={data} />
+        </div>
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={floorHumidity}>
-        <h2>Floor Humidity</h2>
+        <div className='subheader-container'>
+          <h2>Floor Humidity</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={temperature}>
-        <h2>Temperature</h2>
+        <div className='subheader-container'>
+          <h2>Temperature</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={coTwo}>
-        <h2>Co2</h2>
+        <div className='subheader-container'>
+          <h2>Co2</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
     </div>
