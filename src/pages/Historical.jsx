@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import LineChartComponent from '../components/LineChartComponent/LineChartComponent'
+import '../stylessheet/Historical.css'
 
 const Historical = () => {
   const data = [
@@ -70,6 +71,9 @@ const Historical = () => {
 
   return (
     <div>
+      <div className='title'>
+        <h1>Historical</h1>
+      </div>
       <div style={{ display: 'flex', flexDirection: 'row', margin: 19 }}>
         <button className='historicalButton' onClick={scrollToHumidity}>
           Humidity
@@ -85,19 +89,27 @@ const Historical = () => {
         </button>
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={humidity}>
-        <h2>Humidity</h2>
+        <div className='subheader-container'>
+          <h2>Humidity</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={floorHumidity}>
-        <h2>Floor Humidity</h2>
+        <div className='subheader-container'>
+          <h2>Floor Humidity</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={temperature}>
-        <h2>Temperature</h2>
+        <div className='subheader-container'>
+          <h2>Temperature</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
       <div style={{ height: 'auto', marginBottom: 86 }} ref={coTwo}>
-        <h2>Co2</h2>
+        <div className='subheader-container'>
+          <h2>Co2</h2>
+        </div>
         <LineChartComponent data={data} />
       </div>
     </div>
