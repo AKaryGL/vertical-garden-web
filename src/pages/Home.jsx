@@ -1,7 +1,29 @@
 import React from 'react'
 import '../stylessheet/Home.css'
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const Home = () => {
+
+  const images = [
+    {
+      original: "https://i.postimg.cc/44DkZbc2/jitomate1.png",
+      thumbnail: "https://i.postimg.cc/44DkZbc2/jitomate1.png",
+    },
+    {
+      original: "https://i.postimg.cc/SRg5GctQ/cilantro1.png",
+      thumbnail: "https://i.postimg.cc/SRg5GctQ/cilantro1.png",
+    },
+    {
+      original: "https://i.postimg.cc/hjQy362D/fresa1.png",
+      thumbnail: "https://i.postimg.cc/hjQy362D/fresa1.png",
+    },
+    {
+      original: "https://i.postimg.cc/SsS5ZDkQ/cebolla.png",
+      thumbnail: "https://i.postimg.cc/SsS5ZDkQ/cebolla.png",
+    },
+  ];
+
   return (
     <div>
       <div className='container'>
@@ -11,58 +33,30 @@ const Home = () => {
             Welcome to the future of farming at home! With our automated garden
             system.{' '}
           </p>
-          <button className='login'>Long in</button>
-          <button className='register'>Register</button>
+          <div className='button-home'>
+            <button className='login'>Long in</button>
+            <button className='register'>Register</button>
+          </div>
         </div>
 
         <div className='image-container'>
           <img
-            src='https://i.postimg.cc/qv9G7TzL/huerto-removebg-preview.png'
+            src='https://i.postimg.cc/0jc8XzW1/huerto.png'
             className='huerto'
           ></img>
         </div>
       </div>
 
-      <section>
-        <div id='container'>
-          <div>
-            <img src='https://i.postimg.cc/RqxM1v6c/puya1.png' alt='logo RSS' />
-            <span>Chili puya</span>
-          </div>
-
-          <div>
-            <img
-              src='https://i.postimg.cc/yNGWg4PT/rabano1.png'
-              alt='logo RSS'
-            />
-            <span>Radish</span>
-          </div>
-
-          <div>
-            <img
-              src='https://i.postimg.cc/hGW5SfF8/jitomate1.png'
-              alt='logo RSS'
-            />
-            <span>Tomato</span>
-          </div>
-
-          <div>
-            <img
-              src='https://i.postimg.cc/T39DP4Fk/fresa1.png'
-              alt='logo RSS'
-            />
-            <span>Strawberry</span>
-          </div>
-
-          <div>
-            <img
-              src='https://i.postimg.cc/KvT7mQmV/habanero1.png'
-              alt='logo RSS'
-            />
-            <span>Habanero pepper</span>
-          </div>
-        </div>
-      </section>
+      <div style={{width: "34vw", margin: "auto"}}>
+        <ImageGallery items={images}
+          showPlayButton={false}
+          showFullscreenButton={false}
+          autoPlay={true}
+          slideInterval={4000}
+          slideDuration={1000}
+        />
+      </div>
+      
     </div>
   )
 }
