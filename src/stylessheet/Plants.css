@@ -1,57 +1,6 @@
-#title {
-  font-size: 52px;
-  padding-top: 40px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-}
-
-.encabezado-container {
-  font-size: 22px;
-  padding-left: 80px;
-  margin-right: 80px;
-  width: 600px;
-  text-align: left;
-}
-
-.image-container {
-  width: 800px;
-  margin-right: 80px;
-}
-
-.huerto {
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  box-shadow: 0 0 10px #bbb9b9;
-}
-
-.login {
-  margin-top: 80px;
-  margin-left: 40px;
-  margin-bottom: 140px;
-  background-color: #fff;
-  color: #7ab07a;
-  height: 40px;
-  width: 180px;
-  border: 1px solid #7ab07a;
-  border-radius: 20px;
-}
-
-.register {
-  background-color: #7ab07a;
-  color: #fff;
-  margin: 20px;
-  height: 40px;
-  width: 180px;
-  border: 1px solid #7ab07a;
-  border-radius: 20px;
-}
-
-.section-carrucel {
-  width: 100%;
-  margin: 0 auto;
+.title-plants {
+  padding-left: 600px;
+  font-size: 44px;
 }
 
 #container:after {
@@ -68,11 +17,11 @@
   margin: 0 auto;
 }
 
-#container div {
-  width: 17%;
+.container-div {
+  width: 22%;
   height: auto;
   -webkit-transition: -webkit-transform 1s;
-  display: inline;
+  display: block;
   float: left;
   margin: 0px 3% 0 0;
   padding: 0;
@@ -121,4 +70,13 @@
   #container div {
     width: 15%;
   }
+}
+
+.learn-more {
+    height: 50px;
+    width: 220px;
+    background-color: #F2F2F2;
+    border: 1px solid #878787;
+    margin-left: 600px;
+    border-radius: 10px;
 }
